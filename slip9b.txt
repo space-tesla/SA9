@@ -1,0 +1,59 @@
+Slip 9b 
+Q2 Write python programs on Raspberry Pi to perform the following: 
+Read your name and print a “Hello” message with the name. 
+Read two numbers and print their sum, difference, product, and division. 
+Count the number of words and characters of a given string. 
+Find the area of a given shape (rectangle, triangle, and circle) by reading the shape 
+and appropriate values from standard input. 
+# ------------------------------- 
+# 1. Read your name and print Hello message 
+# ------------------------------- 
+name = input("Enter your name: ") 
+print("Hello", name + "! Welcome to Raspberry Pi.") 
+# ------------------------------- 
+# 2. Read two numbers and print sum, difference, product, division 
+# ------------------------------- 
+num1 = float(input("Enter first number: ")) 
+num2 = float(input("Enter second number: ")) 
+print("Sum =", num1 + num2) 
+print("Difference =", num1 - num2) 
+print("Product =", num1 * num2) 
+if num2 != 0: 
+print("Division =", num1 / num2) 
+else: 
+print("Division = Not possible (Cannot divide by zero)") 
+# ------------------------------- 
+# 3. Word and character count of a given string 
+# ------------------------------- 
+text = input("Enter a sentence: ") 
+word_count = len(text.split()) 
+char_count = len(text) 
+ 
+print("Word Count:", word_count) 
+print("Character Count:", char_count) 
+ 
+# ------------------------------- 
+# 4. Area of a given shape 
+# rectangle, triangle, circle 
+# ------------------------------- 
+shape = input("Enter shape (rectangle/triangle/circle): ").lower() 
+ 
+if shape == "rectangle": 
+    length = float(input("Enter length: ")) 
+    width = float(input("Enter width: ")) 
+    area = length * width 
+    print("Area of Rectangle =", area) 
+ 
+elif shape == "triangle": 
+    base = float(input("Enter base: ")) 
+    height = float(input("Enter height: ")) 
+    area = 0.5 * base * height 
+    print("Area of Triangle =", area) 
+ 
+elif shape == "circle": 
+    radius = float(input("Enter radius: ")) 
+    area = 3.14159 * radius * radius 
+    print("Area of Circle =", area) 
+ 
+else: 
+    print("Invalid shape entered!") 
